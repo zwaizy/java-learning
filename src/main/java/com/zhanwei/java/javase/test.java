@@ -1,7 +1,10 @@
 package com.zhanwei.java.javase;
 
+import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -14,11 +17,20 @@ public class test {
 
 
     public static void main(String[] args) {
-        Integer a = 1,b = 2;
 
-        swap(a,b);
-        System.out.println(a + ",,," + b);
+        List<Integer> list = new ArrayList<Integer>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        list.add(6);
+        list.add(7);
+        list.add(8);
 
+        List<Integer> subList = list.subList(2, 4);
+
+        subList.forEach(System.out::println);
     }
 
     private static void swap(Integer a, Integer b) {
